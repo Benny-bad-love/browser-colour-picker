@@ -1,0 +1,145 @@
+body {
+  width: 169px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.palette {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-slot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Combined color preview and dropper button */
+.color-preview {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Merged color value and copy functionality */
+.color-value {
+  width: 80px;
+  text-align: center;
+  font-size: 12px;
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative; /* Add this line */
+}
+
+/* New styles for alternate color values */
+.alternate-values {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.alternate-values-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 10;
+  padding: 5px;
+  min-width: 120px;
+  font-size: 12px;
+}
+
+.alternate-values-menu.show {
+  display: block;
+}
+
+.alternate-values-menu div {
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.alternate-values-menu div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Styles for the blank swatch */
+.blank-swatch {
+  border: 2px dashed #ccc;
+  background: transparent !important;
+}
+
+/* Styles for the collection header */
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.collection-name {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.collection-name:hover {
+  text-decoration: underline;
+}
+
+.collection-settings {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cog-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.settings-menu {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  z-index: 100;
+}
+
+.settings-menu div {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.settings-menu div:hover {
+  background: #f0f0f0;
+}
+
+.rgb-value, .hsl-value {
+  cursor: pointer;
+}
+
+.rgb-value:hover, .hsl-value:hover {
+  background-color: #f0f0f0;
+}
+
+.collection-dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Add these styles for the collection dropdown */
+.collection-dropdown {
+  /* ... existing styles ... */
+  max-height: 150px; /* Adjust as needed */
+  overflow-y: auto;
+}
